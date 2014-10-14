@@ -12,6 +12,13 @@ final class GPIO
     const LOGIC_HIGHT = 1;
     const LOGIC_LOW = 0;
 
+    protected $_MODES_DIGITAL = array(
+        self::MODE_IN,
+        self::MODE_OUT,
+    );
+
+
+
     const GPIO_DIR = '/sys/class/gpio';
 
     const GPIO_EXPORT = 'export';
@@ -76,6 +83,12 @@ final class GPIO
         return array('mode' => $mode, 'value' => $value);
     }
 
+    /**
+     * Создаём импульс определённой длительности
+     *
+     * @param $signal_width int Длительность сигнала
+     * @param $signal_pause int Длительность паузы
+     */
     public function pulse($signal_width, $signal_pause)
     {
         $this->writeDigital(self::LOGIC_HIGHT);
@@ -84,6 +97,13 @@ final class GPIO
         usleep($signal_pause);
     }
 
+    /**
+     * Создаёт шим сигнал определенной силы и количества импульсов
+     *
+     * @param $Hz int частота
+     * @param $stretch int Сила шим сигнала
+     * @param $count int количество импульсов
+     */
     public function signalPWM($Hz,$stretch,$count)
     {
         $duty_cycle = self::USECOND / $Hz;
@@ -105,10 +125,14 @@ final class GPIO
         }
     }
 
-
+    /**
+     * Записывает логическое значение в пин
+     *
+     * @param $val int
+     */
     public function writeDigital($val)
     {
-        if(in_array($val, array(self::LOGIC_HIGHT, self::LOGIC_LOW,)))
+        if(in_array($val, $this->_MODES_DIGITAL))
         {
             $file = $this->_pin_dir . DIRECTORY_SEPARATOR . self::GPIO_FILE_VALUE;
             $cmd = 'echo ' . $val . ' > ' . $file;
@@ -120,13 +144,22 @@ final class GPIO
         }
     }
 
+    /**
+     * Возврашение значение пина
+     * @return float
+     */
     public function read()
     {
         $file = $this->_pin_dir . DIRECTORY_SEPARATOR . self::GPIO_FILE_VALUE;
         return floatval(file_get_contents($file));
     }
 
-    public function mode($val)
+    /**
+     * Устанавливает мод пина
+     *
+     * @param $val
+     */
+    public function setMode($val)
     {
         if(in_array($val, array(self::MODE_OUT, self::MODE_IN,)))
         {
