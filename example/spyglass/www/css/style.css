@@ -1,0 +1,117 @@
+body{
+
+	background-color: #c4bfbf;
+	background-image: url(../images/podloghka.png );
+
+}
+#wrapper {
+	width: 1020px;
+	margin: 50px auto;
+}
+#view{
+	width: 284px;
+	height: 285px;
+	float:left;
+	margin-right : 45px;
+	background-image: url(../images/view_mini-.png );
+
+}
+
+#control{
+	position: relative;
+	width: 688px;
+	height: 285px;
+	float:left;
+	background: url(../images/control_panel.png) 50% 50% no-repeat;
+}
+
+#foto{
+	position: absolute;
+	width: 97px;
+	height: 92px;
+	background-image: url(../images/control_list_header_foto.png);
+	background-repeat: no-repeat;
+	left: 260px;
+	top: 60px;
+}
+#foto:hover{
+	background-image: url(../images/control_foto_naved.png);
+}
+
+#video{
+	position: absolute;
+	width: 83px;
+	height: 61px;
+	background-image: url(../images/control_list_header_video.png);
+	background-repeat: no-repeat;
+	left: 390px;
+	top: 65px;
+}
+
+#video:hover{
+	background-image: url(../images/control_video_naved.png);
+}
+
+
+#sekyndomer{
+	position: absolute;
+	width: 150px;
+	height: 150px;
+	background-image: url(../images/control_secyndomer.png);
+	background-repeat: no-repeat;
+	left: 500px;
+	top: 65px;
+}
+
+#big{
+	position: absolute;
+	width: 83px;
+	height: 58px;
+	background-image: url(../images/control_list_header_big.png);
+	background-repeat: no-repeat;
+	left: 266px;
+	top: 160px;
+}
+
+#big:hover{
+	background-image: url(../images/control_big_naved.png);
+}
+
+#playlist{
+	position: absolute;
+	outline: 0px solid red;
+	width: 83px;
+	height: 61px;
+	background-image: url(../images/list_back.png);
+	background-repeat: no-repeat;
+	left: 390px;
+	top: 160px;
+}
+
+#playlist:hover{
+	background-image: url(../images/control_playlist_naved.png);
+}
+
+#playlist_big{
+
+	outline: 0px solid red;
+	width: 1007px;
+	height: 727px;
+	background-image: url(../images/playlist_big.png);
+	background-repeat: no-repeat;
+	left: 50px;
+	top: 260px;
+	display: none;
+}
+
+#playlist_big_razvorot{
+
+	outline: 0px solid red;
+	width: 1007px;
+	height: 727px;
+	background-image: url(../images/playlist_big_razvorot.png);
+	background-repeat: no-repeat;
+	left: 50px;
+	top: 260px;
+
+}
