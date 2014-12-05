@@ -59,7 +59,7 @@ final class GPIO
             $cmd = 'echo ' . $this->_pin . ' > ' . self::GPIO_DIR . DIRECTORY_SEPARATOR . self::GPIO_EXPORT;
             exec($cmd);
             exec($cmd);
-            # usleep 1000 000 1second
+            # usleep 1 000 000 1second
             usleep(50000);
         }
         else
