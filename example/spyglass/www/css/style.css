@@ -1,0 +1,5 @@
+#control_area .ajax_command {display: block;}
+#control_area #vertical {width: 23px;height: 16px;}
+#control_area #vertical .cmd_up{background: transparent url(../imgs/up.png) 50% 50% no-repeat}
+#control_area #vertical .cmd_down{background: transparent url(../imgs/down.png) 50% 50% no-repeat}
+#control_area #horizontal {width: 16px;height: 23px;}

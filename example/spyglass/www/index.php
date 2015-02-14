@@ -3,6 +3,7 @@
 <head>
     <link rel="stylesheet" href="css/reset.css" type="text/css">
     <link rel="stylesheet" href="css/styler.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
 
     <script type="text/javascript" src="js/jquery.js"></script>
 
@@ -10,28 +11,23 @@
 
 </head>
 
-<body style="background:darkslategrey">
+<body>
 
-<div style="width: 1007px;margin: 10px auto">
+<div >
 
     <div id="control_area">
-        <div >
-            <a href="/commands.php?command=up" class="ajax_command"
-               style="left: 117px;top:75px"></a>
-            <a href="/commands.php?command=down" class="ajax_command"
-               style="left: 117px;top:162px"></a>
-            <a href="/commands.php?command=left" class="ajax_command"
-               style="left: 72px;top: 118px;"></a>
-            <a href="/commands.php?command=right" class="ajax_command"
-               style="left: 162px;top: 118px;"></a>
-            <img src="/images/control_osnova.png">
+        <div class="commands vertical">
+            <a href="/commands.php?command=up"      class="ajax_command cmd_up"></a>
+            <a href="/commands.php?command=down"    class="ajax_command cmd_down"></a>
+        </div>
+        <div class="commands horizontal">
+            <a href="/commands.php?command=left"    class="ajax_command cmd_left"></a>
+            <a href="/commands.php?command=right"   class="ajax_command cmd_right"></a>
         </div>
         <div class="clearFix"></div>
     </div>
-    <div style="position: relative;width: 1007px;margin: 0px auto" >
-        <img id="streamimage" class="x-rotated-180" src="/stream/" height="714px"
-             style="position: absolute;left: 27px;top:5px"/>
-        <img src="images/playlist_big-razvorot.png" style="position: absolute;"/>
+    <div>
+        <img id="streamimage" class="x-rotated-180" src="/stream/" height="480px"/>
     </div>
 </div>
 
