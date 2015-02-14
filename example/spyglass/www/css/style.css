@@ -1,5 +1,16 @@
-#control_area .ajax_command {display: block;}
-#control_area #vertical {width: 23px;height: 16px;}
-#control_area #vertical .cmd_up{background: transparent url(../imgs/up.png) 50% 50% no-repeat}
-#control_area #vertical .cmd_down{background: transparent url(../imgs/down.png) 50% 50% no-repeat}
-#control_area #horizontal {width: 16px;height: 23px;}
+#super_area {position: relative;width: 817px;height: 582px;margin: 50px auto 0px}
+#super_area #windows_lu {position: absolute;left: 0px;top:0px;z-index: 1}
+#super_area #windows_ru {position: absolute;right: 0px;top:0px;z-index: 1}
+#super_area #windows_ld {position: absolute;left: 0px;bottom:0px;z-index: 1}
+#super_area #windows_rd {position: absolute;right: 0px;bottom:0px;z-index: 1}
+
+#super_area #streamimage {position: absolute;right: 89px;top:51px;z-index:3}
+
+#control_area {}
+#control_area .ajax_command{display: block;}
+#control_area .vertical   {position: absolute;top:50px;right: 45px;width: 40px;z-index: 2}
+#control_area .horizontal {position: absolute;top:0px; right: 0px;width: 200px;height:40px;z-index: 2}
+#control_area .vertical .ajax_command{width: 25px;height: 190px;background-repeat: repeat-x}
+#control_area .vertical .cmd_up{background: transparent url(../imgs/up.png) 50% 0%}
+#control_area .vertical .cmd_down{background: transparent url(../imgs/down.png) 50% 100%}
+#control_area .horizontal .ajax_command{width: 16px;height: 23px;}

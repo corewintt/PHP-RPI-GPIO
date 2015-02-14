@@ -13,7 +13,7 @@
 
 <body>
 
-<div >
+<div id="super_area">
 
     <div id="control_area">
         <div class="commands vertical">
@@ -26,9 +26,11 @@
         </div>
         <div class="clearFix"></div>
     </div>
-    <div>
-        <img id="streamimage" class="x-rotated-180" src="/stream/" height="480px"/>
-    </div>
+    <img id="streamimage" class="x-rotated-180" src="/stream/" height="480px"/>
+    <img id="windows_ru" src="imgs/ramc2rightup.png"/>
+    <img id="windows_lu" src="imgs/ramc2leftup.png"/>
+    <img id="windows_ld" src="imgs/ramc2leftdown.png"/>
+    <img id="windows_rd" src="imgs/ramc2rightdown.png"/>
 </div>
 
 
