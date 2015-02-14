@@ -7,15 +7,7 @@
     <script type="text/javascript" src="js/jquery.js"></script>
 
     <title>SpyGlass V.1</title>
-    <style>
-        .ajax_command {
-            display: block;
-            position: absolute;
-            width: 40px;
-            height: 40px;
-        }
 
-    </style>
 </head>
 
 <body style="background:darkslategrey">
@@ -23,9 +15,7 @@
 <div style="width: 1007px;margin: 10px auto">
 
     <div id="control_area">
-
-
-        <div style="position: relative;height: 276px;width: 688px;margin: 0px auto">
+        <div >
             <a href="/commands.php?command=up" class="ajax_command"
                style="left: 117px;top:75px"></a>
             <a href="/commands.php?command=down" class="ajax_command"
