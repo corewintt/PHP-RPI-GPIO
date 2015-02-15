@@ -42,4 +42,17 @@ switch($_GET['command'])
         $pin2->writeDigital(0);
         $pin3->writeDigital(0);
         break;
+    case 'startstream':
+        #!/bin/bash
+        $path = realpath('../../../');
+        exec('sudo modprobe bcm2835-v4l2');
+        $start = ($path.'/mjpg-streamer/mjpg_streamer -i "'.$path.'/mjpg-streamer/input_uvc.so -y -r 640x480 -f 15" -o "'.$path.'/mjpg-streamer/output_http.so -w '.$path.'/mjpg-streamer/www2" -b');
+        var_dump($start);
+        syslog($start,$out);
+        var_dump($out);
+        break;
+    case 'stopstream':
+        exec('killall mjpg_streamer');
+        break;
+
 }

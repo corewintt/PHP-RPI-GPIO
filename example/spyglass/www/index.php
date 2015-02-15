@@ -14,13 +14,17 @@
 <body>
 
 <div id="super_area">
-
     <div id="control_area">
         <div class="commands vertical">
             <a href="/commands.php?command=up"      class="ajax_command cmd_up"></a>
             <a href="/commands.php?command=down"    class="ajax_command cmd_down"></a>
         </div>
         <div class="commands horizontal">
+
+            <a href="/commands.php?command=startstream"    class="ajax_command cmd_startstream">startstream</a>
+            <a href="/commands.php?command=stopstream"    class="ajax_command cmd_stopstream">stopstream</a>
+
+
             <a href="/commands.php?command=left"    class="ajax_command cmd_left"></a>
             <a href="/commands.php?command=right"   class="ajax_command cmd_right"></a>
         </div>
