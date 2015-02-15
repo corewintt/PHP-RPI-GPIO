@@ -9,8 +9,10 @@
 #control_area {}
 #control_area .ajax_command{display: block;}
 #control_area .vertical   {position: absolute;top:50px;right: 45px;width: 40px;z-index: 2}
-#control_area .horizontal {position: absolute;top:0px; right: 0px;width: 200px;height:40px;z-index: 2}
+#control_area .horizontal {position: absolute;top:25px; left: 60px;height:40px;z-index: 2}
+
 #control_area .vertical .ajax_command{width: 25px;height: 190px;background-repeat: repeat-x}
 #control_area .vertical .cmd_up{background: transparent url(../imgs/up.png) 50% 0%}
 #control_area .vertical .cmd_down{background: transparent url(../imgs/down.png) 50% 100%}
-#control_area .horizontal .ajax_command{width: 16px;height: 23px;}
+
+#control_area .horizontal .ajax_command{float: left;padding-right: 10px}

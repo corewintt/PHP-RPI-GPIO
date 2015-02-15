@@ -46,13 +46,17 @@ switch($_GET['command'])
         #!/bin/bash
         $path = realpath('../../../');
         exec('sudo modprobe bcm2835-v4l2');
-        $start = ($path.'/mjpg-streamer/mjpg_streamer -i "'.$path.'/mjpg-streamer/input_uvc.so -y -r 640x480 -f 15" -o "'.$path.'/mjpg-streamer/output_http.so -w '.$path.'/mjpg-streamer/www2" -b');
-        var_dump($start);
-        syslog($start,$out);
-        var_dump($out);
+        $start = ($path.'/mjpg-streamer/mjpg_streamer -i "'.$path.'/mjpg-streamer/input_uvc.so -y -r 320x240 -f 15" -o "'.$path.'/mjpg-streamer/output_http.so -w '.$path.'/mjpg-streamer/www2" -b');
+        exec($start);
         break;
     case 'stopstream':
         exec('killall mjpg_streamer');
+        break;
+
+    case 'foto':
+        $date = date('Y_m_d_H:i:s');
+        $dir = __DIR__.'/foto/SPY_'.$date.'.jpg';
+        exec('raspistill -vf -hf -o '.$dir);
         break;
 
 }

@@ -21,8 +21,9 @@
         </div>
         <div class="commands horizontal">
 
-            <a href="/commands.php?command=startstream"    class="ajax_command cmd_startstream">startstream</a>
-            <a href="/commands.php?command=stopstream"    class="ajax_command cmd_stopstream">stopstream</a>
+            <a href="/commands.php?command=startstream"    class="ajax_command cmd_startstream">ON</a>
+            <a href="/commands.php?command=stopstream"    class="ajax_command cmd_stopstream">OFF</a>
+            <a href="/commands.php?command=foto"    class="ajax_command cmd_foto">FOTO</a>
 
 
             <a href="/commands.php?command=left"    class="ajax_command cmd_left"></a>
