@@ -4,6 +4,46 @@ include '../../../lib/GPIO.php';
 
 switch($_GET['command'])
 {
+    case 'left':
+
+        $pin4 = GPIO::get(4);
+        $pin4->setMode(GPIO::MODE_OUT);
+
+#end down
+        $pin14 = GPIO::get(14);
+        $pin14->setMode(GPIO::MODE_OUT);
+
+
+        $pin4->writeDigital(0);
+        $pin14->writeDigital(0);
+
+        $pin14->writeDigital(TRUE);
+
+        usleep(100000);
+        $pin4->writeDigital(0);
+        $pin14->writeDigital(0);
+        break;
+
+    case 'right':
+
+        $pin4 = GPIO::get(4);
+        $pin4->setMode(GPIO::MODE_OUT);
+
+#end down
+        $pin14 = GPIO::get(14);
+        $pin14->setMode(GPIO::MODE_OUT);
+
+
+        $pin4->writeDigital(0);
+        $pin14->writeDigital(0);
+
+        $pin4->writeDigital(TRUE);
+
+        usleep(100000);
+        $pin4->writeDigital(0);
+        $pin14->writeDigital(0);
+        break;
+
     case 'up':
 
         $pin2 = GPIO::get(2);
@@ -54,6 +94,8 @@ switch($_GET['command'])
         break;
 
     case 'foto':
+        exec('killall mjpg_streamer');
+        usleep(500000);
         $date = date('Y_m_d_H:i:s');
         $dir = __DIR__.'/foto/SPY_'.$date.'.jpg';
         exec('raspistill -vf -hf -o '.$dir);

@@ -26,8 +26,8 @@
             <a href="/commands.php?command=foto"    class="ajax_command cmd_foto">FOTO</a>
 
 
-            <a href="/commands.php?command=left"    class="ajax_command cmd_left"></a>
-            <a href="/commands.php?command=right"   class="ajax_command cmd_right"></a>
+            <a href="/commands.php?command=left"    class="ajax_command cmd_left">left</a>
+            <a href="/commands.php?command=right"   class="ajax_command cmd_right">right</a>
         </div>
         <div class="clearFix"></div>
     </div>
@@ -38,6 +38,18 @@
     <img id="windows_rd" src="imgs/ramc2rightdown.png"/>
 </div>
 
+<div>
+    <?php
+    $farray = scandir(__DIR__.'/foto/');
+    foreach($farray AS $file)
+    {
+        if(!in_array($file,array('.','..')))
+        {
+            echo '<div><a href="/foto/'.$file.'" target="_blank">'.$file.'</a></div>';
+        }
+    }
+    ?>
+</div>
 
 <script type="text/javascript">
     $(document).ready(function () {
