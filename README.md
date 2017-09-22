@@ -9,20 +9,20 @@ PHP class for RasberryPI GPIO
 
 
 
-################################
-/etc/nginx/nginx.conf 
+```
+# /etc/nginx/nginx.conf 
 
 user pi;
 
-################################
+```
 
-################################
-/etc/php5/fpm/pool.d/www.conf
+```
+# /etc/php5/fpm/pool.d/www.conf
 
 
 user = pi
 group = gpio
-################################
+```
 
 Советы:
 
